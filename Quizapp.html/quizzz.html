@@ -1,0 +1,127 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="/index.html">
+    <title> Quiz</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+      
+        margin: 2vw;
+        padding: 1vw 3vw;
+        border: 1px solid black;
+        border-radius: 2vw;
+    }
+    .user{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    h1{
+        margin: 1vw auto;
+    }
+    input{
+        width: 70%;
+        padding: 1vw 1.5vw;
+        margin: 2vw auto;
+        border-radius: 1vw;
+    }
+    button{
+        width: 10%;
+        padding: 0.5vw 2vw ;
+        border-radius: 1vw;
+    }
+    hr{
+        margin: 2vw auto;
+    
+    }
+    .catg{
+        text-align: center;
+    }
+    h2{
+        font-size: 250%;
+        color: aqua;
+    }
+    .catg1{
+        display: flex;
+        margin: 2vw auto;
+        /* padding: auto 1vw; */
+        justify-content: space-around;
+        
+    }
+    .catg2{
+        display: flex;
+        margin: 2vw auto;
+        justify-content: space-around;
+    }
+    .quz{
+        border: 2px solid rgb(36, 101, 171);
+        border-radius: 1vw;
+        padding: 0.5vw 1vw;
+        width: 35%;
+        background-color: rgb(132, 217, 230);
+    }
+    a{
+        text-decoration: none;
+        width: 35%;
+    }
+</style> 
+    
+
+
+
+
+</head>
+
+<body>
+    <div class="user">
+        <img src="/images/download.png" alt="testbook" style="width: 15%; margin: 2vw auto;">
+        <h1>Enter Your Name To Continew The Quiz !</h1>
+
+
+        <input type="text" name="name" id="playername" placeholder="Enter your name...">
+        <button type="submit" onclick="{EnterName();}">Enter</button>
+    </div>
+    
+    <hr>
+    <div class="catg">
+        <h2>Select Category</h2>
+        <div class="catg1">
+            <a href="R.html" class="quz">
+                Pipes And Cisterns
+            </a>
+            <a href="R2.html" class="quz">
+                CSS
+            </a>
+        </div>
+        <div class="catg2">
+            <a href="R3.html" class="quz">
+                Problems On Age
+            </a>
+            <a href="R4.html" class="quz">
+                Profit And Loss
+            </a>
+        </div>
+        <script>
+            function EnterName() {
+
+                let name = document.getElementById("playername").value;
+                localStorage.setItem('name', name)
+                
+                alert("Select your category");
+
+            }
+        </script>
+
+    </div>
+
+
+</body></html>
